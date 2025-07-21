@@ -88,7 +88,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
     <div class="container-fluid">
       <!-- Mobile sidebar toggle -->
-      <button class="mobile-sidebar-toggle d-lg-none me-2" id="mobileSidebarToggle" aria-label="Open sidebar">
+      <button class="mobile-sidebar-toggle d-lg-none mr-2" id="mobileSidebarToggle" aria-label="Open sidebar">
         <box-icon class="bx" color="#FFF" size="sm" type="solid" name="menu"></box-icon>
       </button>
       <a class="navbar-brand" href="#">
@@ -192,6 +192,36 @@
         </div>
         <div class="modal-body">This is a sample modal.</div>
       </div>
+    </div>
+  </div>
+
+  <!-- ======= Right Offcanvas Sidebar ======= -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSidebarLabel">
+        <box-icon class="bx" color="#212529" size="sm" type="solid" name="bell"></box-icon> Notifications
+      </h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-group">
+        <li class="list-group-item d-flex align-items-center">
+          <box-icon class="bx mr-2" color="#0d6efd" size="sm" type="solid" name="info-circle"></box-icon>
+          New user registered.
+        </li>
+        <li class="list-group-item d-flex align-items-center">
+          <box-icon class="bx mr-2" color="#dc3545" size="sm" type="solid" name="error-circle"></box-icon>
+          Server error reported.
+        </li>
+        <li class="list-group-item d-flex align-items-center">
+          <box-icon class="bx mr-2" color="#198754" size="sm" type="solid" name="check-circle"></box-icon>
+          Backup completed successfully.
+        </li>
+        <li class="list-group-item d-flex align-items-center">
+          <box-icon class="bx mr-2" color="#ffc107" size="sm" type="solid" name="message-square-dots"></box-icon>
+          5 new messages.
+        </li>
+      </ul>
     </div>
   </div>
 

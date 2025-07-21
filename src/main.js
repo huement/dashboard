@@ -67,8 +67,10 @@ window.addEventListener("resize", () => {
 // ======= Offcanvas Sidebar Logic =======
 const offcanvasToggle = document.getElementById("offcanvasToggle");
 const offcanvasSidebar = document.getElementById("offcanvasSidebar");
+const bsOffcanvas = new Offcanvas(offcanvasSidebar);
 offcanvasToggle.addEventListener("click", () => {
-  const bsOffcanvas = new bootstrap.Offcanvas(offcanvasSidebar);
+  console.log("open offcanvas rightside menu");
+
   bsOffcanvas.toggle();
 });
 

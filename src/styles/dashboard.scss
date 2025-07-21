@@ -1,0 +1,246 @@
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:math';
+@use 'sass:color';
+@use 'sass:meta';
+
+$font-path: '/fonts/' !default;
+@import '@huement/ui/scss/hui';
+
+@include fileBanner('Dashboard Layout');
+
+:root {
+  --navbar-size: 60px;
+}
+
+.navbar {
+  height: var(--navbar-size);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+
+  .navbar-brand {
+    font-weight: 600;
+    color: #0d6efd !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 2rem;
+  }
+
+  .offcanvas-toggle {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    color: #212529;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  .dropdown-toggle {
+    color: #212529;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .dropdown-menu {
+    min-width: 8rem;
+  }
+}
+
+.navbar-brand-icon {
+  position: absolute;
+  top: 18px;
+  left: 0.70rem;
+}
+
+.dashboard-wave {
+  width: 100%;
+  display: block;
+  position: absolute;
+  height: calc(350px + var(--navbar-size));
+  z-index: 0;
+  top: 0;
+}
+
+/* ======= Sidebar Styles ======= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background: #212529;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.3s cubic-bezier(.4, 0, .2, 1);
+  z-index: 1040;
+
+  &.collapsed {
+    width: 60px;
+  }
+
+  .sidebar-header {
+    padding: 1.5rem 1rem 1rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: var(--navbar-size);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .sidebar-menu {
+    flex: 1 1 auto;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.85rem 1.5rem;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.05rem;
+      border-left: 3px solid transparent;
+      transition: background 0.2s, border-color 0.2s;
+
+      &.active,
+      &:hover {
+        background: #343a40;
+        border-left: 3px solid #0d6efd;
+        color: #0d6efd;
+      }
+    }
+  }
+
+  &.collapsed {
+
+    .sidebar-header span,
+    .sidebar-menu a span {
+      display: none;
+    }
+
+    .sidebar-header,
+    .sidebar-menu a {
+      justify-content: center;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .collapse-btn i {
+      transform: rotate(180deg);
+      transition: transform 0.3s;
+    }
+  }
+
+  .sidebar-footer {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .collapse-btn {
+      background: #343a40;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, transform 0.3s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+      &:hover {
+        background: #0d6efd;
+        color: #fff;
+        transform: scale(1.08);
+      }
+    }
+  }
+}
+
+/* ======= Main Content Styles ======= */
+.main-content {
+  margin-left: 250px;
+  transition: margin-left 0.3s cubic-bezier(.4, 0, .2, 1);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  min-height: 100vh;
+  padding-top: 80px;
+  z-index: 10;
+  display: block;
+  position: relative;
+}
+
+.main-content.wide-load {
+  margin-left: 60px;
+}
+
+/* ======= Offcanvas Sidebar Styles ======= */
+.offcanvas-end {
+  width: 320px !important;
+}
+
+/* ======= Responsive Sidebar Toggle Button ======= */
+.mobile-sidebar-toggle {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  color: #212529;
+  margin-right: 1rem;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    left: -250px;
+    transition: left 0.3s cubic-bezier(.4, 0, .2, 1), width 0.3s cubic-bezier(.4, 0, .2, 1);
+
+    &.show {
+      left: 0;
+    }
+
+    &.collapsed {
+      width: 60px;
+    }
+
+    &.collapsed.show {
+      left: 0;
+    }
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebar~.main-content {
+    margin-left: 0;
+  }
+
+  .mobile-sidebar-toggle {
+    display: inline-flex;
+  }
+}

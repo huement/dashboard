@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Dashboard Kick Off | @huement/ui</title>
+  <meta name="description" content="Cool Dashboard Starter kit for building whatever">
+  <meta property="og:url" content="https://huement.github.io/ui/">
+  <meta property="og:type" content="website">
+  <meta property="description" content="Cool Dashboard Starter kit for building whatever">
+  <meta property="og:title" content="Dashboard | @huement/ui - v0.9+">
+  <meta property="og:image" content="https://huement.github.io/ui/imgs/Logo.png">
+  <meta property="og:description" content="Cool Dashboard Starter kit for building whatever">
+  <meta property="og:site_name" content="Dashboard | @huement/ui - v0.9+">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@huement/ui">
+  <meta name="twitter:creator" content="@huement/ui">
+  <meta name="twitter:title" content="Preview | @huement/ui">
+  <meta name="twitter:description" content="Cool Dashboard Starter kit for building whatever">
+  <meta name="twitter:image" content="https://huement.github.io/ui/imgs/Logo.png">
+
+  <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="48x48" href="/favicon/favicon-48x48.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicon/favicon-72x72.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="/favicon/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="256x256" href="/favicon/favicon-256x256.png">
+  <link rel="apple-touch-icon" sizes="384x384" href="/favicon/favicon-384x384.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="/favicon/favicon-512x512.png">
+  <link rel="manifest" href="/favicon/manifest.webmanifest" crossorigin="anonymous">
+
+  <!-- [if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  <link rel="stylesheet" href="/src/styles/hui.scss">
+  <link rel="stylesheet" href="/src/styles/dashboard.scss">
+</head>
+<body>
+  <cosmic-wave class="fill-primary dashboard-wave" data-wave-points="13" data-wave-variance="2" data-wave-face="bottom"></cosmic-wave>
+
+  <!-- ======= Sidebar ======= -->
+  <nav class="sidebar" id="sidebar">
+    <div>
+      <div class="sidebar-header">
+        <box-icon type='solid' name='universal-access' class="bx navbar-brand-icon" color="#FFF" size="sm"></box-icon>
+        <span>My Dashboard</span>
+      </div>
+      <ul class="sidebar-menu">
+        <li>
+          <a href="#" class="active">
+            <box-icon class="bx" color="#FFF" size="xs" type="solid" name="home"></box-icon>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <box-icon class="bx" color="#FFF" size="xs" type="solid" name="user"></box-icon>
+            <span>Users</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <box-icon class="bx" color="#FFF" size="xs" type="solid" name="cog"></box-icon>
+            <span>Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <box-icon class="bx" color="#FFF" size="xs" type="solid" name="bar-chart"></box-icon>
+            <span>Reports</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <box-icon class="bx" color="#FFF" size="xs" type="solid" name="bell"></box-icon>
+            <span>Notifications</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar-footer">
+      <button class="collapse-btn" id="sidebarCollapseBtn" aria-label="Collapse sidebar">
+        <box-icon class="bx desktop-icon" color="#FFF" size="sm" type="solid" name="chevron-left"></box-icon>
+        <box-icon class="bx d-none mobile-icon" color="#FFF" size="sm" type="solid" name="chevron-right"></box-icon>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <div class="container-fluid">
+      <!-- Mobile sidebar toggle -->
+      <button class="mobile-sidebar-toggle d-lg-none me-2" id="mobileSidebarToggle" aria-label="Open sidebar">
+        <box-icon class="bx" color="#FFF" size="sm" type="solid" name="menu"></box-icon>
+      </button>
+      <a class="navbar-brand" href="#">
+        <box-icon type='solid' name='universal-access' class="bx navbar-brand-icon" color="#FFF" size="sm"></box-icon>
+        @huement/ui
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <box-icon class="bx" color="#FFF" size="xs" type="solid" name="rocket"></box-icon>
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <box-icon class="bx" color="#FFF" size="xs" type="solid" name="rocket"></box-icon>
+              Analytics
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <box-icon class="bx" color="#FFF" size="xs" type="solid" name="rocket"></box-icon> Action
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <box-icon class="bx" color="#FFF" size="xs" type="solid" name="rocket"></box-icon> Another Action
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <button class="offcanvas-toggle ms-auto" id="offcanvasToggle" aria-label="Open notifications/settings">
+        <box-icon class="bx" color="#FFF" size="sm" type="solid" name="cog"></box-icon>
+      </button>
+      <div class="dropdown">
+        <button class="dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <box-icon class="bx" color="#000" size="sm" type="solid" name="user-circle"></box-icon> John Doe
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          <li>
+            <a class="dropdown-item" href="#">
+              <box-icon class="bx" color="#212529" size="xs" type="solid" name="user"></box-icon> Profile
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">
+              <box-icon class="bx" color="#212529" size="xs" type="solid" name="log-out"></box-icon> Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <div class="container-fluid">
+    <div class="container main-content custom-dashboard" id="mainContent">
+      <div class="title-crumb-wrapper">
+        <div class="row">
+          <div class="col">
+            <h4 class="fw-bold h4">
+              Dashboard > Main
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col-md-4 mx-auto">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card 1</h5>
+              <p class="card-text">This is a sample card.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Open Modal
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">This is a sample modal.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

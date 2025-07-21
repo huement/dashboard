@@ -1,0 +1,41 @@
+{
+  "name": "@huement/dashboard",
+  "version": "0.0.1",
+  "description": "dashboard template. Uses Bootstrap 5, SCSS, and minimal vanilla JS. Easily adapted into a project",
+  "main": "index.js",
+  "directories": {},
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/huement/dashboard.git"
+  },
+  "keywords": [
+    "HTML5",
+    "Bootstrap",
+    "Dashboard",
+    "Admin"
+  ],
+  "author": "Derek <derek@huement.com>",
+  "license": "MPL-2.0",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/huement/dashboard/issues"
+  },
+  "homepage": "https://github.com/huement/dashboard#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "vite": "^7.0.4"
+  },
+  "dependencies": {
+    "@huement/ui": "file:../hui",
+    "@huement/cosmicwave": "file:../CosmicWave",
+    "bootstrap": "^5.3.3",
+    "sass": "^1.89.2"
+  }
+}

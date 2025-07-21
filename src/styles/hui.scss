@@ -1,0 +1,22 @@
+///
+/// HUI TEST STYLINGS
+/// Everything here is just to make sure the poop is grouped.
+///
+
+// Sass Modules
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:math';
+@use 'sass:color';
+@use 'sass:meta';
+
+//
+// SUPER CLASSY SETUP
+$font-path: '/fonts/' !default;
+@import '@huement/ui/scss/ui';
+
+body {
+  background: $mono-100;
+  color: $mono-900;
+  font-size: $base-font-size;
+}
